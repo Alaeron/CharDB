@@ -1,0 +1,23 @@
+/* Theme Variables */
+:root {
+    --background-color-dark: #202020;
+    --background-color-dark-selected: #303030;
+    --background-color-dark-hover: #404040;
+
+    --background-color-medium: #303030;
+    --background-color-medium-selected: #404040;
+    --background-color-medium-hover: #505050;
+
+    --background-color-light: #404040;
+    --background-color-light-selected: #505050;
+    --background-color-light-hover: #606060;
+
+    --border-color-dark: #252525;
+    --border-color-medium: #353535;
+    --border-color-light: #454545;
+
+    --title-color: #dddddd;
+    --text-color: #bbbbbb;
+
+    --link-color: lightblue;
+}

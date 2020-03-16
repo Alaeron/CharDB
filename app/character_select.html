@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; img-src 'self' data:;">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link rel="stylesheet" href="./css/theme-dark.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/character_select.css">
+    <title>CharDB</title>
+  </head>
+  <body>
+    <header class="component" data-component="menubar"></header>
+    <main>
+      <h1>Characters</h1>
+      <div id="character-grid" class="grid">
+        <div class="character-card">
+          <div class="character-info">
+            <h2>Blood</h2>
+            <label>Cleric 4<br>Paladin 1</label>
+          </div>
+        </div>
+        <div class="character-card">
+          <div class="character-info">
+            <h2>Charles</h2>
+            <label>Bard 5</label>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./js/character_select.js"></script>
+  </body>
+</html>

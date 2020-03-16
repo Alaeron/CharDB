@@ -1,0 +1,83 @@
+/* Basic HTML */
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    color: var(--text-color)
+}
+a {
+    color:var(--link-color);
+}
+html {
+    height: 100vh;
+}
+body {
+    background: var(--background-color-dark);
+    margin: 0px;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 28px 1fr;
+}
+textarea, input {
+    background-color: var(--background-color-dark);
+    color: var(--text-color);
+    border: none
+}
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    background-color: var(--background-color-medium);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--background-color-light-selected);
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+}
+::-webkit-scrollbar-button, ::-webkit-scrollbar-corner, ::-webkit-resizer {
+    display: none;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+/* Header */
+header {
+    display: flex;
+    background: var(--background-color-medium);
+    border-bottom: 1px solid var(--border-color-medium);
+    align-items: center;
+    justify-content: space-between;
+}
+header div:first-child {
+    margin-left: 2px;
+}
+header div:last-child {
+    margin-right: 2px;
+}
+header div {    
+    margin-right: 2px;
+}
+header * {
+    display: flex;
+    align-items: center;
+}
+header > div > * {
+    height: 28px;
+    background: none;
+    border: none;
+    padding: 5px 4px;
+}
+header > div > *:hover {
+    background-color: var(--background-color-medium-hover);
+}
+#btn-min, #btn-max, #btn-close {
+    height: 28px;
+    width: 34px;
+}
+#btn-close:hover {
+    background-color: #dd0000;
+}
