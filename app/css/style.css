@@ -55,6 +55,12 @@ header {
 header div:first-child {
     margin-left: 2px;
 }
+header div.title-wrap {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    -webkit-app-region: drag;
+}
 header div:last-child {
     margin-right: 2px;
 }

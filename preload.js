@@ -1,15 +1,21 @@
 // All of the Node.js APIs are available in the preload process.
 // It has the same sandbox as a Chrome extension.
-currentWindow = require('electron').remote.getCurrentWindow()
+
 const fs = require("fs");
+const { remote } = require('electron');
+
+currentWindow = remote.getCurrentWindow();
 
 // Enable IPC in renderer process
 window.ipcRequest = require('./ipc_request');
+window.loadFile = currentWindow.loadFile;
 
 // Run window ready steps
-window.addEventListener('DOMContentLoaded', () => {
-    loadCustomComponents()
-})
+window.addEventListener('DOMContentLoaded', initDOM);
+
+function initDOM() {
+    loadCustomComponents();
+}
 
 function loadCustomComponents() {
     // Load custom components

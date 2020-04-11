@@ -2,35 +2,28 @@
 
 const { ipcMain } = require("electron");
 const sqlite = require("sqlite3").verbose();
+const fs = require('fs')
 
 // Routes
 ipcMain.on("get-character-list", getCharacterList);
-setCharacterAppearance();
-
-
-function getAppearance() {
-// temp store blob image
-  const fs = require('fs')
-  const bitmap = fs.readFileSync('warforged.bmp')
-  const buff = Buffer.from(bitmap)
-  return buff
-}
+ipcMain.on("set-character-appearance", setCharacterAppearance);
 
 
 // Functions
 function setCharacterAppearance(event, arg) {
+  let bitmap = fs.readFileSync(arg.data.path)
+  let buff = Buffer.from(bitmap)
+
   let db = new sqlite.Database("app/data/character_database.db");
     db.serialize(() => {
-      var image64 = getAppearance().toString('base64');
+      var image64 = buff.toString('base64');
       db.exec(`
         UPDATE Character
         SET Appearance = '` + image64 + `'
-        WHERE ID=1;
+        WHERE ID=` + arg.data.id + `;
       `, (err, result) => {
           if (err) {
               console.log(err)
-          } else {
-            console.log('done')
           }
         }
       );
