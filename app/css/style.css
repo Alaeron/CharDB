@@ -17,6 +17,10 @@ body {
     display: grid;
     grid-template-rows: 28px 1fr;
 }
+main {
+    display: grid;
+    grid-template-columns: 45px 1fr;
+}
 textarea, input {
     background-color: var(--background-color-dark);
     color: var(--text-color);

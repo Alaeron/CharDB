@@ -54,17 +54,20 @@ function loadCustomComponents() {
     case "character_info.html":
       document.getElementById("img-character-info").classList.add("selected");
       break;
-    case "character_combat.html":
+    case "combat.html":
       document.getElementById("img-combat").classList.add("selected");
       break;
-    case "character_spells.html":
+    case "spells.html":
       document.getElementById("img-spells").classList.add("selected");
       break;
-    case "character_inventory.html":
+    case "inventory.html":
       document.getElementById("img-inventory").classList.add("selected");
       break;
-    case 'character_notes.html':
-      document.getElementById("img-character-notes").classList.add("selected")
+    case 'notes.html':
+      document.getElementById("img-notes").classList.add("selected")
+      break;
+    case 'settings.html':
+      document.getElementById("img-settings").classList.add("selected")
       break;
   }
 }
