@@ -41,4 +41,7 @@ function loadCustomComponents() {
     document.getElementById("btn-close").addEventListener("click", function() {
         currentWindow.close()
     })  
+    
+    document.getElementById("img-character-info").classList.add("selected")
+
 }

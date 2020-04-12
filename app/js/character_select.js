@@ -16,7 +16,7 @@ function loadCharacters(event, result) {
     }
     result.forEach(element => {
         var card = document.createRange().createContextualFragment(`
-            <a class="character-card" id="character-` + element.ID + `" href='character_sheet.html?id=` + element.ID + `'>
+            <a class="character-card" id="character-` + element.ID + `" href='character_info.html?id=` + element.ID + `'>
                 <div class="character-info">
                   <h2>` + element.Name + `</h2>
                   <label>` + element.Race + `</label>

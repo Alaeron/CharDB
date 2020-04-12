@@ -47,10 +47,11 @@ input[type=number]::-webkit-outer-spin-button {
 /* Header */
 header {
     display: flex;
-    background: var(--background-color-medium);
+    background: var(--background-color-light);
     border-bottom: 1px solid var(--border-color-medium);
     align-items: center;
     justify-content: space-between;
+    font-size: 14px;
 }
 header div:first-child {
     margin-left: 2px;
@@ -86,4 +87,26 @@ header > div > *:hover {
 }
 #btn-close:hover {
     background-color: #dd0000;
+}
+
+
+/* toolbar-left */
+.toolbar-left {
+    background-color: var(--background-color-medium);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+.toolbar-left img {
+    width: 45px;
+    height: 45px;
+    padding: 10px;
+}
+.toolbar-left img:hover {
+    cursor: pointer;
+    background-color: var(--background-color-medium-hover);
+}
+
+.toolbar-left .selected {
+    background-color: var(--background-color-medium-selected);
 }
