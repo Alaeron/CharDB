@@ -102,11 +102,13 @@ header > div > *:hover {
     height: 45px;
     padding: 10px;
 }
+.toolbar-left img:last-child {
+    margin-top: auto;
+}
 .toolbar-left img:hover {
     cursor: pointer;
     background-color: var(--background-color-medium-hover);
 }
-
 .toolbar-left .selected {
     background-color: var(--background-color-medium-selected);
 }
