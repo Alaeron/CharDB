@@ -26,7 +26,7 @@ function loadCustomComponents() {
       );
       var fragment = document
         .createRange()
-        .createContextualFragment(data.toString());
+        .createContextualFragment(data.toString().replace(/\?id=x/g, window.location.search));
       element.replaceWith(fragment);
     }
   );

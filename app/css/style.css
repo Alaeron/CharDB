@@ -84,6 +84,7 @@ header > div > * {
 }
 header > div > *:hover {
     background-color: var(--background-color-medium-hover);
+    cursor: default;
 }
 #btn-min, #btn-max, #btn-close {
     height: 28px;
@@ -106,7 +107,7 @@ header > div > *:hover {
     height: 45px;
     padding: 10px;
 }
-.toolbar-left img:last-child {
+.toolbar-left *:last-child {
     margin-top: auto;
 }
 .toolbar-left img:hover {
