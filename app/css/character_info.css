@@ -2,3 +2,38 @@ main {
     display: grid;
     grid-template-columns: 45px 1fr;
 }
+.character-sheet {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.character-sheet > * {
+    margin: 5px;
+    padding: 5px;
+}
+.character-sheet .group {
+    display: flex;
+    flex-flow: row;
+    max-width: 1200px;
+    width: calc(100% - 10px);
+}
+.character-sheet .group .group-column {
+    margin-left: 5px;
+    display: flex;
+    flex-flow: column;
+    flex-basis: 300px;
+    flex-grow: 1;
+}
+#imgAppearance {
+    height: 400px;
+    width: 300px;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+.character-sheet label:first-child {
+    margin-top: 0px;
+}
+.character-sheet label {
+    margin-top: 5px;
+    margin-bottom: 3px;
+}

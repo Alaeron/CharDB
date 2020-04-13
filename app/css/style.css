@@ -47,6 +47,11 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
 }
+input {
+    font-size: 16px;
+    padding: 4px 10px;
+    border-radius: 3px;
+}
 
 /* Header */
 header {
@@ -116,4 +121,8 @@ header > div > *:hover {
 }
 .toolbar-left .selected {
     background-color: var(--background-color-medium-selected);
+}
+
+.group {
+    background-color: var(--background-color-medium);
 }

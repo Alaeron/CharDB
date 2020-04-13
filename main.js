@@ -21,7 +21,9 @@ function createWindow() {
       preload: path.join(__dirname, "preload.js")
     },
     backgroundColor: "#202020",
-    frame: false
+    frame: false,
+    minWidth: 800,
+    minHeight: 800
   });
   mainWindow.setMenu(null)
 
